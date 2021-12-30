@@ -85,7 +85,7 @@ class Interception:
                 area = cv2.contourArea(contour)
                 if area < self.min_area:
                     continue
-                if ((len(approx) >= 4)):
+                if (len(approx) == 4):
                     (x, y, w, h) = cv2.boundingRect(approx)
                     if h*1.5 < w:
                         continue
@@ -106,7 +106,7 @@ class Interception:
                     self.axis_contour_list.append([x, y, w, h, num])
                     cv2.putText(self.raw_image, num, (x-w, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2) 
             cv2.drawContours(self.raw_image, self.contour_list, -1, (0,0,255), 2)
-            self.show('Objects Detected',self.raw_image)
+            # self.show('Objects Detected',self.raw_image)
             
             # 逐张保存
             for i in range(0, len(self.axis_contour_list)):
