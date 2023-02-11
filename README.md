@@ -3,17 +3,9 @@
 ## 环境安装
 ```bash
 pip install opencv-python
-pip install pytesseract
 ```
-- pytesseract还需要去网上下载软件
-- - 链接地址：https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-setup-4.00.00dev.exe
-- 找到你的自定义路径，如F:\Tesseract-OCR\tesseract.exe，将F:\Tesseract-OCR以及F:\Tesseract-OCR\tessdata添加到环境变量中
-- 找到你安装pytesseract的路径，如E:\Anaconda3\envs\tfod\Lib\site-packages\pytesseract.py
-- 点开此文件，找到tesseract_cmd将它改为你刚刚安装的tesseract.exe的路径
-- 最后将中文包也放到你刚刚安装的路径中的tessdata目录下即可（中文包请在utils文件夹内下载）
-
 ## 使用
-完成环境安装后，运行split.py文件即可，请将你的词根表图片放置在split.py的同级目录images/下，格式建议为.png, .jpg
+完成环境安装后，运行split.py文件即可，请将你的词根表图片放置在split.py的同级目录images/下，格式为.jpg
 
 ## 结果
 结果保存在同级目录dataset/下
